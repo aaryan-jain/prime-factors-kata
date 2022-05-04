@@ -29,12 +29,68 @@ public class PrimeFactorTest {
     }
 
     @Test
-    public void that_function_will_return_list_of_prime_factors_if_composite() {
+    public void that_function_will_return_list_of_prime_factors_if_composite_1() {
         int numberToBeChecked = 6;
         list.add(2);
         list.add(3);
-        Assertions.assertThat(list).isEqualTo(PrimeFactor.generate(6));
+        Assertions.assertThat(list).isEqualTo(PrimeFactor.generate(numberToBeChecked));
     }
 
+    @Test
+    public void that_function_will_return_list_of_prime_factors_if_composite_2() {
+        list.removeAll(list);
+        int numberToBeChecked = 12;
+        list.add(2);
+        list.add(2);
+        list.add(3);
+        Assertions.assertThat(list).isEqualTo(PrimeFactor.generate(numberToBeChecked));
+    }
 
+    @Test
+    public void that_function_will_return_list_of_prime_factors_if_composite_3() {
+        list.removeAll(list);
+        int numberToBeChecked = 100;
+        list.add(2);
+        list.add(2);
+        list.add(5);
+        list.add(5);
+        Assertions.assertThat(list).isEqualTo(PrimeFactor.generate(numberToBeChecked));
+    }
+
+    @Test
+    public void that_function_will_return_list_of_prime_factors_if_composite_4() {
+        list.removeAll(list);
+        int numberToBeChecked = 77;
+        list.add(7);
+        list.add(11);
+        Assertions.assertThat(list).isEqualTo(PrimeFactor.generate(numberToBeChecked));
+    }
+
+    @Test
+    public void test_for_prime_factors_in_squares_1() {
+        list.removeAll(list);
+        int numberToBeChecked = 4;
+        list.add(2);
+        list.add(2);
+        Assertions.assertThat(list).isEqualTo(PrimeFactor.generate(numberToBeChecked));
+    }
+
+    @Test
+    public void test_for_prime_factors_in_squares_2() {
+        list.removeAll(list);
+        int numberToBeChecked = 121;
+        list.add(11);
+        list.add(11);
+        Assertions.assertThat(list).isEqualTo(PrimeFactor.generate(numberToBeChecked));
+    }
+
+    @Test
+    public void test_for_prime_factors_of_cubes() {
+        list.removeAll(list);
+        int numberToBeChecked = 27;
+        list.add(3);
+        list.add(3);
+        list.add(3);
+        Assertions.assertThat(list).isEqualTo(PrimeFactor.generate(numberToBeChecked));
+    }
 }
