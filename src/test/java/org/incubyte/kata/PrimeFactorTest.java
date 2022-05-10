@@ -93,4 +93,20 @@ public class PrimeFactorTest {
         list.add(3);
         Assertions.assertThat(list).isEqualTo(PrimeFactor.generate(numberToBeChecked));
     }
+
+    @Test
+    public void generic_test_1() {
+        list.removeAll(list);
+        int numberToBeChecked = 2*3*3*5*7*7*11*11*11;
+        list.add(2);
+        list.add(3);
+        list.add(3);
+        list.add(5);
+        list.add(7);
+        list.add(7);
+        list.add(11);
+        list.add(11);
+        list.add(11);
+        Assertions.assertThat(list).isEqualTo(PrimeFactor.generate(numberToBeChecked));
+    }
 }
